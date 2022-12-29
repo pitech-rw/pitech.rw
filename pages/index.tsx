@@ -1,3 +1,4 @@
+import styles from '../styles/Index.module.css'
 const indexPage = () => {
   return (
     <div>
@@ -5,25 +6,22 @@ const indexPage = () => {
         <div className="header-wrapper">
           <figure className="logo">
             <a href="index.html">
-              <p className="logo">Boni</p>
+              <p className="logo">Pi Tech</p>
             </a>
           </figure>
           <nav className="nav-wrapper">
             <ul>
-              <li><a href="./index.html#form">Translation</a></li>
+              <li><a href="./index.html#form">About</a></li>
               <li><a href="./contact.html">Contact</a></li>
             </ul>
           </nav>
         </div>
       </header>
       <main>
-        <section className="jumbotron">
-          <h2>Translations by humans</h2>
-          <p>There will be a time when translations will be done by robots. Until then, we can only rely on humans for accurate translations</p>
-        </section>
-        <div className="form-card">
-        <p>Leave your text here and you will get a translation in an hour</p>
-          <form onsubmit="return false " id='form' method="post">
+      <div className={styles.card}>
+        <h2>CARD</h2>
+        <div className={styles.formCard}>
+          <form>
             <div className="form-group">
               <input type="text" className="form-control" id="username" placeholder="What should we call you?" />
             </div>
@@ -31,27 +29,21 @@ const indexPage = () => {
               <input type="email" className="form-control" name="email" placeholder="Your email address" required/>
             </div>
             <div className="form-group">
-              <textarea name="text" maxlength="1000" id="text" cols="30" rows="10" className="form-control" placeholder="your text (less than 1000 characters)" title="Pro-tip: resize this window by dragging the tiles in the bottom-corner" required></textarea>
+              <textarea name="text" id="text" className="form-control" placeholder="your message" title="Pro-tip: resize this window by dragging the tiles in the bottom-corner" required></textarea>
             </div>
-            <div className="form-group">
-              <label for="language">Translate to: </label>
-              <select name="language" id="language" className="form-control">
-                <option value="kiny">Kinyarwanda</option>
-                <option value="en">English</option>
-                <option value="fr">French</option>
-              </select>
-            </div>
+            
             <div className="form-group">
               <button id="form-submit" type="submit" className="btn-primary form-control">Send</button>
             </div>
           </form>
         </div>
+      </div>
+        <section className="jumbotron">
+          <h2>Pi Tech</h2>
+          <p>Welcome to Pi Tech, </p>
+        </section>
+      
       </main>
-      <footer>
-        <div className="footer-wrapper">
-          <p>&copy; 2017 Boni</p>
-        </div>
-      </footer>
       <div className="modal closed" id="modal">
         <div className="modal-content">
           <div className="modal-header">
