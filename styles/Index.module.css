@@ -1,6 +1,12 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+}
+
 .card {
-  width: 380px;
-  height: 508px;
+  width: 50%;
   background: #07182E;
   position: relative;
   display: flex;
@@ -8,14 +14,44 @@
   place-items: center;
   overflow: hidden;
   border-radius: 20px;
-
+  padding: 20px;
 }
-
-.formCard {
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+  }
+}
+.carduno, .formCard, .cardduo, .cardtreo{
   z-index: 1;
   color: white;
 }
 
+.formGroup .formControl {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.textAreaControl {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+}
+.btnPrimary {
+  margin-left: 50px;
+  width: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: solid;
+}
 .card::before {
   content: '';
   position: absolute;
