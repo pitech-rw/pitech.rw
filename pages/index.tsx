@@ -25,7 +25,7 @@ const indexPage = () => {
           </div>
           <div className={styles.card}>
             <div className={styles.cardtreo}>
-              <p>Do you find that intriguing? Is there something you'd like to explore and see where it takes you? Drop us a line using the next form and we'll be happy to get in touch.</p>
+              <p>Do you find that intriguing? Is there something you &apos;d like to explore and see where it takes you? Drop us a line using the next form and we &apos; ll be happy to get in touch.</p>
             </div>
           </div>
           <div className={styles.card}>
