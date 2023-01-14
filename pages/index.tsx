@@ -3,7 +3,7 @@ import styles from '../styles/Index.module.css'
 import { collection, addDoc } from 'firebase/firestore'
 import storage from  '../service/firebase'
 
-const indexPage = () => {
+const IndexPage = () => {
 
   const [message, setMessage] = useState({})
   const [showModal,setVisible]=useState(false);
@@ -81,4 +81,4 @@ const indexPage = () => {
   )
 }
 
-export default indexPage
+export default IndexPage
