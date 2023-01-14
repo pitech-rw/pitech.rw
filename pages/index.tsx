@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styles from '../styles/Index.module.css'
 import { collection, addDoc } from 'firebase/firestore'
 import storage from  '../service/firebase'
@@ -6,7 +6,7 @@ import storage from  '../service/firebase'
 const indexPage = () => {
 
   const [message, setMessage] = useState({})
-
+  const [showModal,setVisible]=useState(false);
   const updateMessage = (e: any) => {
     const {name} = e.target;
     const {value} =e.target;
@@ -18,7 +18,7 @@ const indexPage = () => {
     try {
       console.info('Obj ', message)
       const docReference = await addDoc(collection(storage, "contacts"), message)
-      console.info("Doc written. Id:", docReference.id)
+      setVisible(true);
     } catch (e) {
       console.error('Unable to add a doc', e)
     }
@@ -55,6 +55,9 @@ const indexPage = () => {
           <div className={styles.card}>
             <div className={styles.formCard}>
               <form onSubmit={saveContactMessage}>
+                <div className={styles.formGroup}>
+                  {showModal && (<p>Thank you for contacting us!</p>)}
+                </div>
                 <div className={styles.formGroup}>
                   <input type="text" onChange={updateMessage} className={styles.formControl} name="name" placeholder="What should we call you?" />
                 </div>
