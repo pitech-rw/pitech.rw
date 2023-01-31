@@ -2,7 +2,7 @@ import { useState, useContext} from 'react'
 import styles from '../styles/Index.module.css'
 import { collection, addDoc } from 'firebase/firestore'
 import storage from  '../service/firebase'
-import { Modal, ModalContext} from './modal'
+import  Modal from './modal'
 
 const IndexPage = () => {
 
@@ -13,16 +13,12 @@ const IndexPage = () => {
     setMessage((values)=>({...values,[name]:value}))
   }
 
-  const openModal = useContext(ModalContext)
   const saveContactMessage = async (e: any) => {
     e.preventDefault()
 
     try {
       await addDoc(collection(storage, "contacts"), message)
       
-      if(openModal)
-        openModal();
-      else console.info(openModal, ' rented')
       setTimeout(() => {
       }, 10000);
     } catch (e) {

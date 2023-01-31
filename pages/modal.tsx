@@ -1,6 +1,6 @@
 import React, {useState } from 'react'
 
-const ModalContext = React.createContext<(() => void)| undefined>(undefined)
+//const ModalContext = React.createContext<(() => void)| undefined>(undefined)
 const Modal = ({ children }: any) => {
     const [isvisible, setIsVisible] = useState(false)
 
@@ -13,7 +13,7 @@ const Modal = ({ children }: any) => {
     }
 
     return (
-        <ModalContext.Provider value={openModal}>
+        <div>
             {
                 isvisible && (
                     <div>
@@ -24,7 +24,7 @@ const Modal = ({ children }: any) => {
                     </div>
                 )
             }
-        </ModalContext.Provider>
+        </div>
     )
 }
-export {ModalContext, Modal}
+export default Modal
