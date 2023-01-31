@@ -1,7 +1,7 @@
 import React, {useState } from 'react'
 
 const ModalContext = React.createContext<(() => void)| undefined>(undefined)
-const Modal = ({ children }) => {
+const Modal = ({ children }: any) => {
     const [isvisible, setIsVisible] = useState(false)
 
     const openModal = () => {

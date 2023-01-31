@@ -43,19 +43,12 @@ const IndexPage = () => {
           </div>
           <div className={styles.card}>
             <div className={styles.cardduo}>
-              <p>We love the number Pi (&pi;). Why? Because it has special (cool) properties.</p><br />
-              <ul>
-                <li>It has an infinite number of decimal places</li>
-                <li>The digits are non-repeating</li>
-                <li>The digits are non-terminating</li>
-              </ul>
-              <br />
-              <p>We like to look at Technology through the same lenses. A tool that gives people endless possibilities where the limit is only your imagination.</p>
+              <p>We like to look at Technology as a tool that gives people endless possibilities where the limit is only your imagination.</p>
             </div>
           </div>
           <div className={styles.card}>
             <div className={styles.cardtreo}>
-              <p>Do you find that intriguing? <br />Is there a software project you &apos;d like to explore and see where it takes you?<br />Does your website need maintainance?<br/>Drop us a line using the next form, we &apos; ll be happy to get in touch.</p>
+              <p>Is there a software project you &apos;d like to explore and see where it takes you? Or you need maintainance for your website?<br /><br/>Drop us a line using the next form, we &apos; ll be happy to get in touch.</p>
             </div>
           </div>
           <div className={styles.card}>
@@ -81,9 +74,9 @@ const IndexPage = () => {
           
         </div>
       </main>
-      <Modal openModal={openModal}>
+      <Modal>
         <h2>Thanks for reaching out!</h2>
-        <p>We'll get back to you in less than 24 hours.</p>
+        <p>We&apos;ll get back to you in less than 24 hours.</p>
       </Modal>
     </div>
   )
