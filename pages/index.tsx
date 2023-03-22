@@ -1,5 +1,31 @@
+import { useState, useContext} from 'react'
 import styles from '../styles/Index.module.css'
-const indexPage = () => {
+import { collection, addDoc } from 'firebase/firestore'
+import storage from  '../service/firebase'
+import  Modal from './modal'
+
+const IndexPage = () => {
+
+  const [message, setMessage] = useState({})
+  const updateMessage = (e: any) => {
+    const {name} = e.target;
+    const {value} =e.target;
+    setMessage((values)=>({...values,[name]:value}))
+  }
+
+  const saveContactMessage = async (e: any) => {
+    e.preventDefault()
+
+    try {
+      await addDoc(collection(storage, "contacts"), message)
+      
+      setTimeout(() => {
+      }, 10000);
+    } catch (e) {
+    //TO DO: tracking
+    }
+  }
+
   return (
     <div>
      
@@ -13,32 +39,26 @@ const indexPage = () => {
           </div>
           <div className={styles.card}>
             <div className={styles.cardduo}>
-              <p>We love the number &pi;. Why? Because it has special (cool) properties.</p><br />
-              <ul>
-                <li>It has an infinite number of decimal places</li>
-                <li>The digits are non-repeating</li>
-                <li>The digits are non-terminating</li>
-              </ul>
-              <br />
-              <p>We like to think of Technology through the same lenses. A tool that gives people endless opportunity where the limit is only your imagination.</p>
+              <p>We like to look at Technology as a tool that gives people endless possibilities where the limit is only your imagination.</p>
             </div>
           </div>
           <div className={styles.card}>
             <div className={styles.cardtreo}>
-              <p>Do you find that intriguing? Is there something you &apos;d like to explore and see where it takes you? Drop us a line using the next form and we &apos; ll be happy to get in touch.</p>
+              <p>Is there a software project you &apos;d like to explore and see where it takes you? Or you need maintainance for your website?<br /><br/>Drop us a line using the next form, we &apos; ll be happy to get in touch.</p>
             </div>
           </div>
           <div className={styles.card}>
+                
             <div className={styles.formCard}>
-              <form>
+              <form onSubmit={saveContactMessage}>
                 <div className={styles.formGroup}>
-                  <input type="text" className={styles.formControl} id="username" placeholder="What should we call you?" />
+                  <input type="text" onChange={updateMessage} className={styles.formControl} name="name" placeholder="What should we call you?" />
                 </div>
                 <div className={styles.formGroup}>
-                  <input type="email" className={styles.formControl} name="email" placeholder="Your email address" required/>
+                  <input type="email" onChange={updateMessage} className={styles.formControl} name="email" placeholder="Your email address" required/>
                 </div>
                 <div className={styles.formGroup}>
-                  <textarea name="text" id="text" className={styles.textAreaControl} placeholder="your message" title="Pro-tip: resize this window by dragging the tiles in the bottom-corner" required></textarea>
+                  <textarea name="text" onChange={updateMessage}  id="text" className={styles.textAreaControl} placeholder="your message" title="Pro-tip: resize this window by dragging the tiles in the bottom-corner" required></textarea>
                 </div>
                 
                 <div className={styles.formGroup}>
@@ -50,8 +70,12 @@ const indexPage = () => {
           
         </div>
       </main>
-      </div>
+      <Modal>
+        <h2>Thanks for reaching out!</h2>
+        <p>We&apos;ll get back to you in less than 24 hours.</p>
+      </Modal>
+    </div>
   )
 }
 
-export default indexPage
+export default IndexPage
