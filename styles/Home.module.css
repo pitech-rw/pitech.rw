@@ -4,8 +4,9 @@
 .bContainer {
   border-radius: 50px;
   background: #e0e0e0;
-  box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
+  box-shadow:
+    20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
 }
 
 .main {
@@ -67,8 +68,15 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family:
+    Menlo,
+    Monaco,
+    Lucida Console,
+    Liberation Mono,
+    DejaVu Sans Mono,
+    Bitstream Vera Sans Mono,
+    Courier New,
+    monospace;
 }
 
 .grid {
@@ -79,8 +87,6 @@
   max-width: 800px;
 }
 
-
-
 .card {
   margin: 1rem;
   padding: 1.5rem;
@@ -89,7 +95,9 @@
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
   width: 25%;
   max-width: 300px;
 }
@@ -116,8 +124,6 @@
   height: 1em;
   margin-left: 0.5rem;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
   .card,

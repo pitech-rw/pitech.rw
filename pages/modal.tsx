@@ -1,30 +1,28 @@
-import React, {useState } from 'react'
+import React, { useState } from 'react';
 
 //const ModalContext = React.createContext<(() => void)| undefined>(undefined)
 const Modal = ({ children }: any) => {
-    const [isvisible, setIsVisible] = useState(false)
+  const [isvisible, setIsVisible] = useState(false);
 
-    const openModal = () => {
-        setIsVisible(true)
-    }
+  const openModal = () => {
+    setIsVisible(true);
+  };
 
-    const closeModal = () => {
-        setIsVisible(false)
-    }
+  const closeModal = () => {
+    setIsVisible(false);
+  };
 
-    return (
+  return (
+    <div>
+      {isvisible && (
         <div>
-            {
-                isvisible && (
-                    <div>
-                        <div>
-                            <button onClick={closeModal}>&times;</button>
-                            {children}
-                        </div>
-                    </div>
-                )
-            }
+          <div>
+            <button onClick={closeModal}>&times;</button>
+            {children}
+          </div>
         </div>
-    )
-}
-export default Modal
+      )}
+    </div>
+  );
+};
+export default Modal;
