@@ -11,10 +11,9 @@ const About = () => {
                   About Us
                 </h2>
                 <p className="mb-12 text-neutral-500 dark:text-neutral-300">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                  culpa aliquid, iusto magni laboriosam aut vero, suscipit
-                  doloremque libero, provident saepe at eum fugiat sit! Nulla
-                  dolor asperiores officiis illum.
+                  Our mission is to enable businesses to realize their full potential
+                  through IT solutions as well as develop applications for the software
+                  marketplace
                 </p>
               </div>
             </div>

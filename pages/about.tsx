@@ -16,10 +16,8 @@ export default function About() {
             Pi Tech Ltd. is a company registered in Kigali, Rwanda that
             specializes in Software Development and Consultancy. We offer IT
             solutions that range from serverless applications to Software as a
-            Service and On-premises software management.
+            Service and On-premises cloud solutions management.
           </p>
-          Guard at the door, your demon is safe here tonight, at the end of the
-          funnel protect me my wicked your evile safe here tonight.
         </div>
 
         <h1 className={styles.title}>Welcome to Pi Tech Rwanda</h1>
