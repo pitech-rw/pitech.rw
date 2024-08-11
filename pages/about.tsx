@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
 
-export default function Home() {
+export default function About() {
   return (
     <div className={styles.container}>
       <Head>
@@ -12,28 +12,56 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.bContainer}>
-        <p>Pi Tech Ltd. is a company registered in Kigali, Rwanda that specializes in Software Development and Consultancy.  We offer IT solutions that range from serverless applications to Software as a Service and On-premises software management.</p>
-          Guard at the door, your demon is safe here tonight, at the end of the funnel protect me my wicked your evile safe here tonight.
+          <p>
+            Pi Tech Ltd. is a company registered in Kigali, Rwanda that
+            specializes in Software Development and Consultancy. We offer IT
+            solutions that range from serverless applications to Software as a
+            Service and On-premises cloud solutions management.
+          </p>
         </div>
 
-        <h1 className={styles.title}>
-          Welcome to Pi Tech Rwanda
-        </h1>
-        <p> Our line of work extends to collaboration with government institutions including but not limited to Rwanda Utility Regulations Authority (RURA) building dashboards for the transport sector. We have also worked with private companies like Algorithm Ltd, the company behind Ishyiga software, the all-in-one solution for pharmacy store management, working on their codebase by adding new functionalities and fixing bugs. We have also worked with  Carnegie Mellon University Africa  for teaching assistantship in software development courses.</p>
-        <p>Our work is also visible in the global tech space, having worked with well known brands like Andela, a marketplace for technologists, and World Bank, the international financial institution, as software engineers.</p>
+        <h1 className={styles.title}>Welcome to Pi Tech Rwanda</h1>
+        <p>
+          {' '}
+          Our line of work extends to collaboration with government institutions
+          including but not limited to Rwanda Utility Regulations Authority
+          (RURA) building dashboards for the transport sector. We have also
+          worked with private companies like Algorithm Ltd, the company behind
+          Ishyiga software, the all-in-one solution for pharmacy store
+          management, working on their codebase by adding new functionalities
+          and fixing bugs. We have also worked with Carnegie Mellon University
+          Africa for teaching assistantship in software development courses.
+        </p>
+        <p>
+          Our work is also visible in the global tech space, having worked with
+          well known brands like Andela, a marketplace for technologists, and
+          World Bank, the international financial institution, as software
+          engineers.
+        </p>
 
-        <p>Our mission is to enable businesses to realize their full potential through IT solutions as well as develop applications for the software marketplace.</p>
+        <p>
+          Our mission is to enable businesses to realize their full potential
+          through IT solutions as well as develop applications for the software
+          marketplace.
+        </p>
 
-        <p>Our vision is to build a seamless IT experience for businesses by providing solutions that meet business requirements and maintain availability over 99.9%</p>
+        <p>
+          Our vision is to build a seamless IT experience for businesses by
+          providing solutions that meet business requirements and maintain
+          availability over 99.9%
+        </p>
 
-
-        <p>We are primarily focused on Web Technologies. Our areas of interest include but are not limited to web apps development and maintenance. We also work on mobile apps and transform data into insights that empower businesses to make informed decisions.</p>
-
+        <p>
+          We are primarily focused on Web Technologies. Our areas of interest
+          include but are not limited to web apps development and maintenance.
+          We also work on mobile apps and transform data into insights that
+          empower businesses to make informed decisions.
+        </p>
       </main>
 
       <footer className={styles.footer}>
         <p>&copy; All rights reversed 2022</p>
       </footer>
     </div>
-  )
+  );
 }
