@@ -1,3 +1,8 @@
+import Image from "next/image";
+import irpvLogo from '/assets/irpv.svg'
+import safariLogo from 'assets/safari.png'
+import gorillaLogo from 'assets/gorillagames.png'
+
 const Testimonials = () => {
   return (
     <div className="container my-24 mx-auto md:px-6" id="projects">
@@ -13,7 +18,7 @@ const Testimonials = () => {
                 <div className="flex flex-wrap items-center">
                   <div className="flex-basis w-full shrink-0 grow-0 px-3 lg:w-5/12">
                     <div className="w-20 h-20 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 hover:cursor-pointer">
-                      <img src="./irpv.sg" alt="Igenagaciro Logo"></img>
+                      <Image src={irpvLogo} alt="Igenagaciro Logo"/>
                     </div>
                   </div>
                   <div className="flex-basis w-full shrink-0 grow-0 px-3 lg:w-7/12">
@@ -31,7 +36,7 @@ const Testimonials = () => {
                 <div className="flex flex-wrap items-center">
                   <div className="flex-basis w-full shrink-0 grow-0 px-3 lg:w-5/12">
                     <div className="w-20 h-20 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 hover:cursor-pointer">
-                      <img src="./safari.png" alt="Safari Logo"></img>
+                      <Image src={safariLogo} alt="Safari Logo" />
                     </div>
                   </div>
                   <div className="flex-basis w-full shrink-0 grow-0 px-3 lg:w-7/12">
@@ -49,7 +54,7 @@ const Testimonials = () => {
                 <div className="flex flex-wrap items-center">
                   <div className="flex-basis w-full shrink-0 grow-0 px-3 lg:w-5/12">
                     <div className="w-20 h-20 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 hover:cursor-pointer">
-                      <img src="./gorillagames.png" alt="Gorilla games Logo"></img>
+                      <Image src={gorillaLogo} alt="Gorilla games Logo" />
                     </div>
                   </div>
                   <div className="flex-basis w-full shrink-0 grow-0 px-3 lg:w-7/12">
