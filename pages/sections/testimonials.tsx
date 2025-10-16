@@ -1,6 +1,6 @@
 const Testimonials = () => {
   return (
-    <div className="container my-24 mx-auto md:px-6" id="projects">
+    <div className="container my-24 mx-auto md:px-6 scroll-mt-24" id="projects">
       <section className="mb-32">
         <h2 className="mb-12 text-center text-3xl font-bold">
           Companies we worked together
