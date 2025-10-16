@@ -1,6 +1,6 @@
 const Testimonials = () => {
   return (
-    <div className="container my-24 mx-auto md:px-6" id="projects">
+    <div className="container my-24 mx-auto md:px-6 scroll-mt-24" id="projects">
       <section className="mb-32">
         <h2 className="mb-12 text-center text-3xl font-bold">
           Companies we worked together
@@ -12,8 +12,8 @@ const Testimonials = () => {
               <div className="p-6">
                 <div className="flex flex-wrap items-center">
                   <div className="flex-basis w-full shrink-0 grow-0 px-3 lg:w-5/12">
-                    <div className="w-20 h-20 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 hover:cursor-pointer">
-                      <img src="./irpv.sg" alt="Igenagaciro Logo"></img>
+                    <div className="w-25 h-20 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 hover:cursor-pointer flex items-center">
+                      <img className="flex items-center h-12 w-auto " src="/irpv.svg" alt="Igenagaciro Logo"></img>
                     </div>
                   </div>
                   <div className="flex-basis w-full shrink-0 grow-0 px-3 lg:w-7/12">
@@ -30,8 +30,8 @@ const Testimonials = () => {
               <div className="p-6">
                 <div className="flex flex-wrap items-center">
                   <div className="flex-basis w-full shrink-0 grow-0 px-3 lg:w-5/12">
-                    <div className="w-20 h-20 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 hover:cursor-pointer">
-                      <img src="./safari.png" alt="Safari Logo"></img>
+                    <div className="w-25 h-20 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 hover:cursor-pointer flex items-center">
+                      <img src="/safari.png" alt="Safari Logo"></img>
                     </div>
                   </div>
                   <div className="flex-basis w-full shrink-0 grow-0 px-3 lg:w-7/12">
@@ -48,8 +48,8 @@ const Testimonials = () => {
               <div className="p-6">
                 <div className="flex flex-wrap items-center">
                   <div className="flex-basis w-full shrink-0 grow-0 px-3 lg:w-5/12">
-                    <div className="w-20 h-20 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 hover:cursor-pointer">
-                      <img src="./gorillagames.png" alt="Gorilla games Logo"></img>
+                    <div className="w-25 h-20 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 hover:cursor-pointer flex items-center">
+                      <img src="/gorillagames.png" alt="Gorilla games Logo"></img>
                     </div>
                   </div>
                   <div className="flex-basis w-full shrink-0 grow-0 px-3 lg:w-7/12">

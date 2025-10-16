@@ -1,7 +1,7 @@
 import Link from 'next/link';
 const About = () => {
   return (
-    <div className="container my-24 mx-auto md:px-6" id="about">
+    <div className="container my-24 mx-auto md:px-6 scroll-mt-24" id="about">
       <section className="mb-32 text-center lg:text-left">
         <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
           <div className="flex flex-wrap items-center">
