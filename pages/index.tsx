@@ -15,10 +15,10 @@ const IndexPage = () => {
         <div className="px-6 py-12 text-center md:px-12 lg:text-left">
           <div className="container mx-auto">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div className="mt-12 lg:mt-0">
+              <div className="m-16 lg:mt-0">
                 <h1 className="mb-12 text-5xl font-bold tracking-tight text-[hsl(218,81%,95%)] md:text-6xl xl:text-7xl">
                   We are <br />
-                  <span className="text-[hsl(218,81%,75%)]">Pitech</span>
+                  <span className="text-[hsl(218,81%,75%)]">Pitech Rwanda</span>
                 </h1>
                 <p className="text-lg text-[hsl(218,81%,95%)]">
                   We like to look at Technology as a tool that gives people
