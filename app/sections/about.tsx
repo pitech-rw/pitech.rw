@@ -1,35 +1,66 @@
 import Link from 'next/link';
-const About = () => {
-  return (
-    <div className="container my-24 mx-auto md:px-6 scroll-mt-24" id="about">
-      <section className="mb-32 text-center lg:text-left">
-        <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-          <div className="flex flex-wrap items-center">
-            <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
-              <div className="px-6 py-12 md:px-12">
-                <h2 className="display-5 mb-6 text-4xl font-bold text-primary dark:text-primary-400">
-                  About Us
-                </h2>
-                <p className="mb-12 text-neutral-500 dark:text-neutral-300">
-                  Our mission is to enable businesses to realize their full potential
-                  through IT solutions as well as develop applications for the software
-                  marketplace
-                </p>
-              </div>
-            </div>
-            <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12 mb-10">
-              <Link
-                className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
-                href="#contact"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
 
-export default About;
+const highlights = [
+  {
+    title: 'Mission-driven delivery',
+    body: 'We help businesses realize their potential through dependable IT solutions and products built for real-world operations.',
+  },
+  {
+    title: 'Regional & global experience',
+    body: 'From public-sector platforms to high-growth startups, we bring lessons learned across Rwanda and international engagements.',
+  },
+  {
+    title: 'Long-term reliability',
+    body: 'We design for maintainability and availability — so your systems stay fast, observable, and easy to evolve.',
+  },
+];
+
+export default function About() {
+  return (
+    <section
+      id="about"
+      className="scroll-mt-24 py-24 md:py-28"
+    >
+      <div className="mx-auto max-w-6xl px-6 md:px-8">
+        <div className="grid gap-14 lg:grid-cols-2 lg:gap-20 lg:items-start">
+          <div>
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--accent-primary)]">
+              About Pi Tech
+            </h2>
+            <p className="mt-3 text-3xl font-semibold tracking-tight text-[var(--text-primary)] md:text-4xl">
+              Engineering discipline, without the attitude
+            </p>
+            <p className="mt-6 text-lg leading-relaxed text-[var(--text-secondary)]">
+              Pi Tech Ltd. is a Kigali-registered software consultancy. We build
+              and operate modern web platforms, cloud systems, and data tools —
+              from greenfield products to hardening and extending systems
+              already in market.
+            </p>
+            <Link
+              href="#contact"
+              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent-primary)] transition hover:text-[var(--accent-hover)]"
+            >
+              Discuss your roadmap
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+          <ul className="flex flex-col gap-6">
+            {highlights.map((item) => (
+              <li
+                key={item.title}
+                className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] p-6 backdrop-blur-sm"
+              >
+                <h3 className="text-lg font-semibold text-[var(--text-primary)]">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-[var(--text-secondary)] leading-relaxed">
+                  {item.body}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
