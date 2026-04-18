@@ -2,9 +2,9 @@ import Testimonials from './sections/testimonials';
 import About from './sections/about';
 import Contactus from './sections/contactus';
 import Footer from './sections/footer';
-import Navbar from './sections/navbar';
+import Navbar from './sections/Navbar/navbar';
 
-const IndexPage = () => {
+export default function HomePage() {
   return (
     <div className="container mx-auto">
       <Navbar />
@@ -37,6 +37,4 @@ const IndexPage = () => {
       <Footer />
     </div>
   );
-};
-
-export default IndexPage;
+}
