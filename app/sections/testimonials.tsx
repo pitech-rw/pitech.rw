@@ -56,21 +56,21 @@ export default function SelectedWork() {
                 rel="noopener noreferrer"
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] transition hover:border-[var(--accent-primary)]/30"
               >
-                <div className="relative flex h-36 items-center justify-center border-b border-[var(--border-subtle)] bg-[var(--bg-deep)]/80 p-6">
+                <div className="relative flex h-40 items-center justify-center border-b border-[var(--border-subtle)] bg-[var(--bg-deep)]/80 p-6 md:h-44">
                   {p.isSvg ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={p.image}
                       alt=""
-                      className="max-h-12 w-auto object-contain opacity-90 transition group-hover:opacity-100"
+                      className="max-h-16 w-auto object-contain opacity-90 transition group-hover:opacity-100 md:max-h-20"
                     />
                   ) : (
                     <Image
                       src={p.image}
                       alt=""
-                      width={160}
-                      height={48}
-                      className="max-h-12 w-auto object-contain opacity-90 transition group-hover:opacity-100"
+                      width={240}
+                      height={80}
+                      className="max-h-16 w-auto object-contain opacity-90 transition group-hover:opacity-100 md:max-h-20"
                     />
                   )}
                 </div>

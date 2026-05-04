@@ -1,5 +1,5 @@
 .navbar {
-  background: rgba(10, 14, 39, 0.95);
+  background: var(--navbar-bg);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   position: sticky;
@@ -101,6 +101,31 @@
   color: var(--text-primary);
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.themeToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.themeToggle:hover {
+  background: var(--bg-card);
+  border-color: var(--accent-primary);
 }
 
 @media (max-width: 768px) {
