@@ -61,10 +61,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+250788231926"
+                  href="tel:+250787799082"
                   className="text-[var(--text-secondary)] hover:text-[var(--accent-primary)]"
                 >
-                  +250 788 231 926
+                  +250 787 779 082
                 </a>
               </li>
               <li>
@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-[var(--border-subtle)] pt-8 text-sm text-[var(--text-muted)] md:flex-row md:items-center">
-          <p>© {year} Pi Tech Ltd. All rights reserved.</p>
+          <p>© {year} Pi Tech Ltd · All rights reserved.</p>
           <p className="text-xs">Kigali, Rwanda</p>
         </div>
       </div>

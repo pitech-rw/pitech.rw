@@ -61,14 +61,14 @@ export default function Contactus() {
                   Phone
                 </p>
                 <a
-                  href="tel:+250788231926"
+                  href="tel:+250787799082"
                   className="mt-1 block text-lg font-medium text-[var(--text-primary)] hover:text-[var(--accent-primary)]"
                 >
-                  +250 788 231 926
+                  +250 787 799 082
                 </a>
               </div>
               <p className="text-sm text-[var(--text-muted)]">
-                Pi Tech Ltd. · Kigali, Rwanda
+                Pi Tech Ltd · Kigali, Rwanda
               </p>
             </div>
           </div>

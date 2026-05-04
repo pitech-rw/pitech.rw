@@ -31,7 +31,7 @@ export default function About() {
               Engineering discipline, without the attitude
             </p>
             <p className="mt-6 text-lg leading-relaxed text-[var(--text-secondary)]">
-              Pi Tech Ltd. is a Kigali-registered software consultancy. We build
+              Pi Tech Ltd. is a Rwanda-registered software consultancy. We build
               and operate modern web platforms, cloud systems, and data tools —
               from greenfield products to hardening and extending systems
               already in market.
