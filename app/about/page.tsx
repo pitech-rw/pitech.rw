@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Navbar from '../sections/Navbar/navbar';
+import Footer from '../sections/footer';
 
 export const metadata: Metadata = {
   title: 'Pi Tech - About',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="min-h-screen">
+      <Navbar />
       <section className="hero-mesh relative border-b border-[var(--border-subtle)] py-24 md:py-28">
         <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-8">
           <p className="text-sm font-semibold uppercase tracking-wider text-[var(--accent-primary)]">
@@ -66,34 +69,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-24">
-        <div className="mx-auto max-w-4xl px-6 md:px-8">
-          <h2 className="text-3xl font-semibold tracking-tight text-[var(--text-primary)] md:text-4xl">
-            Experience across public institutions and global teams
-          </h2>
-          <div className="mt-8 space-y-6 text-lg leading-relaxed text-[var(--text-secondary)]">
-            <p>
-              Our work includes collaboration with government institutions,
-              including Rwanda Utilities Regulatory Authority (RURA), where we
-              contributed to transport-sector dashboards and digital service
-              delivery.
-            </p>
-            <p>
-              We have also supported private-sector products such as Ishyiga
-              (by Algorithm Ltd), working directly in production codebases to
-              add capabilities, improve quality, and resolve issues.
-            </p>
-            <p>
-              Internationally, we have contributed to initiatives with partners
-              like Carnegie Mellon University Africa, Andela, and the World
-              Bank, bringing practical engineering standards to diverse teams.
-            </p>
-          </div>
-        </div>
-      </section>
-       <footer className="text-center text-sm text-[var(--text-muted)]">
-        <p>&copy; {new Date().getFullYear()} Pi Tech Ltd · All rights reserved.</p>
-      </footer>
+      <Footer />
     </main>
   );
 }
