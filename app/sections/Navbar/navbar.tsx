@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styles from './Navbar.module.css';
+import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -49,7 +50,7 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo} onClick={() => setIsMenuOpen(false)}>
-          Pi Tech
+          <Image src="/assets/logo.png" alt="Pi Tech" width={100} height={100} className="w-10 h-10" />
         </Link>
 
         <div
