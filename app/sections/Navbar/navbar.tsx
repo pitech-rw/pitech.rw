@@ -50,7 +50,9 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo} onClick={() => setIsMenuOpen(false)}>
-          <Image src="/assets/logo.webp" alt="Pi Tech" width={100} height={100} className="w-10 h-10" />
+          <span className={styles.logoMark}>
+            <Image src="/assets/logo.webp" alt="Pi Tech" width={100} height={100} className="w-10 h-10" />
+          </span>
         </Link>
 
         <div
