@@ -116,7 +116,7 @@ export default function Contactus() {
                   autoComplete="name"
                   onChange={updateMessage}
                   placeholder="e.g. Jean Nkusi"
-                  className="mt-2 block w-full rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-deep)]/60 px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:border-[var(--accent-primary)]/50 focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)]/20"
+                  className="mt-2 block w-full rounded-lg border border-[var(--border-subtle)] bg-[var(--input-bg)] px-4 py-3 focus:border-[var(--accent-primary)]/50 focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)]/20"
                 />
               </div>
               <div>
@@ -134,7 +134,7 @@ export default function Contactus() {
                   autoComplete="email"
                   onChange={updateMessage}
                   placeholder="you@example.com"
-                  className="mt-2 block w-full rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-deep)]/60 px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:border-[var(--accent-primary)]/50 focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)]/20"
+                  className="mt-2 block w-full rounded-lg border border-[var(--border-subtle)] bg-[var(--input-bg)] px-4 py-3 focus:border-[var(--accent-primary)]/50 focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)]/20"
                 />
                 <p className="mt-1 text-xs text-[var(--text-muted)]">
                   We only use this to reply to you.
@@ -154,7 +154,7 @@ export default function Contactus() {
                   required
                   onChange={updateMessage}
                   placeholder="What problem are you solving? Any deadlines or constraints?"
-                  className="mt-2 block w-full resize-y rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-deep)]/60 px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:border-[var(--accent-primary)]/50 focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)]/20"
+                  className="mt-2 block w-full resize-y rounded-lg border border-[var(--border-subtle)] bg-[var(--input-bg)] px-4 py-3 focus:border-[var(--accent-primary)]/50 focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)]/20"
                 />
               </div>
               <button
