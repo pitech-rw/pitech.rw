@@ -7,6 +7,8 @@ import storage from '../../service/firebase';
 export default function Contactus() {
   const [message, setMessage] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const updateMessage = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -16,13 +18,37 @@ export default function Contactus() {
   const saveContactMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
+    setSubmitting(true);
+    setError(null);
+
     try {
+      const emailRes = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(message),
+      });
+
+      if (!emailRes.ok) {
+        const data = await emailRes.json().catch(() => ({}));
+        throw new Error(
+          (data as { error?: string }).error ??
+            'Could not send your message. Please try again or email us directly.',
+        );
+      }
+
       await addDoc(collection(storage, 'contacts'), message);
       setSent(true);
       setTimeout(() => setSent(false), 5400);
       form.reset();
+      setMessage({});
     } catch (err) {
-      console.log(err);
+      setError(
+        err instanceof Error
+          ? err.message
+          : 'Could not send your message. Please try again or email us directly.',
+      );
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -133,10 +159,19 @@ export default function Contactus() {
               </div>
               <button
                 type="submit"
-                className="w-full rounded-lg bg-[var(--accent-primary)] py-3.5 text-sm font-semibold text-[var(--bg-deep)] transition hover:bg-[var(--accent-hover)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] focus:ring-offset-2 focus:ring-offset-[var(--bg-elevated)]"
+                disabled={submitting}
+                className="w-full rounded-lg bg-[var(--accent-primary)] py-3.5 text-sm font-semibold text-[var(--bg-deep)] transition hover:bg-[var(--accent-hover)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] focus:ring-offset-2 focus:ring-offset-[var(--bg-elevated)] disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Send message
+                {submitting ? 'Sending…' : 'Send message'}
               </button>
+              {error && (
+                <p
+                  className="text-center text-sm text-red-400"
+                  role="alert"
+                >
+                  {error}
+                </p>
+              )}
               <p
                 className={`text-center text-sm text-[var(--accent-primary)] transition-opacity ${sent ? 'opacity-100' : 'opacity-0'}`}
                 aria-live="polite"
