@@ -121,16 +121,6 @@ export async function POST(request: Request) {
         process.env.RESEND_FROM_EMAIL ??
         'Pi Tech Contact <onboarding@resend.dev>';
 
-      const guestHtml = `
-        <h2>Your intro call is booked</h2>
-        <p>Hi ${escapeHtml(name)},</p>
-        <p>Thanks for booking a ${BOOKING.durationMinutes}-minute intro call with Pi Tech.</p>
-        <p><strong>When:</strong> ${escapeHtml(whenLabel)}</p>
-        ${meetLine}
-        <p>A calendar invite has also been sent to ${escapeHtml(email)}.</p>
-        <p>— Pi Tech</p>
-      `;
-
       const hostHtml = `
         <h2>New intro call booked</h2>
         <p><strong>Guest:</strong> ${escapeHtml(name)}</p>
@@ -140,21 +130,13 @@ export async function POST(request: Request) {
         ${notes ? `<p><strong>Notes:</strong></p><p style="white-space: pre-wrap;">${escapeHtml(notes)}</p>` : ''}
       `;
 
-      await Promise.all([
-        resend.emails.send({
-          from,
-          to: email,
-          subject: `Confirmed: Intro call with Pi Tech — ${formatFriendlyDate(dateKey)}`,
-          html: guestHtml,
-        }),
-        resend.emails.send({
-          from,
-          to: notifyTo,
-          replyTo: email,
-          subject: `New booking: ${name} — ${formatFriendlyDate(dateKey)}`,
-          html: hostHtml,
-        }),
-      ]);
+      await resend.emails.send({
+        from,
+        to: notifyTo,
+        replyTo: email,
+        subject: `New booking: ${name} — ${formatFriendlyDate(dateKey)}`,
+        html: hostHtml,
+      });
     }
 
     return NextResponse.json({
