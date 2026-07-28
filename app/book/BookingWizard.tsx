@@ -221,7 +221,7 @@ export default function BookingWizard() {
           </a>
         )}
         <p className="mt-6 text-sm text-[var(--text-muted)]">
-          A calendar invite and confirmation were sent to your email.
+          Check your inbox for a Google Calendar invite with the Meet link.
         </p>
         <Link
           href="/"
