@@ -68,7 +68,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-[var(--text-secondary)] hover:text-[var(--accent-primary)]">
+                <Link href="/book" className="text-[var(--text-secondary)] hover:text-[var(--accent-primary)]">
+                  Book an intro call
+                </Link>
+              </li>
+              <li>
+                <a href="/#contact" className="text-[var(--text-secondary)] hover:text-[var(--accent-primary)]">
                   Project inquiry
                 </a>
               </li>

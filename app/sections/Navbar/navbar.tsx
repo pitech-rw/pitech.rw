@@ -7,10 +7,10 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '#services', label: 'Services' },
-  { href: '#process', label: 'Process' },
-  { href: '#about', label: 'About' },
-  { href: '#work', label: 'Work' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#process', label: 'Process' },
+  { href: '/#about', label: 'About' },
+  { href: '/#work', label: 'Work' },
 ] as const;
 
 export default function Navbar() {
@@ -73,11 +73,11 @@ export default function Navbar() {
             ))}
             <li className={styles.ctaWrap}>
               <Link
-                href="#contact"
+                href="/book"
                 className={styles.ctaButton}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Let&apos;s talk
+                Book a call
               </Link>
             </li>
           </ul>

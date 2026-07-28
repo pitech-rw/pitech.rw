@@ -28,7 +28,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-8">
             <Link
-              href="/#contact"
+              href="/book"
               className="inline-flex items-center gap-2 rounded-lg bg-[var(--accent-primary)] px-5 py-3 text-sm font-semibold text-[var(--bg-deep)] transition hover:bg-[var(--accent-hover)]"
             >
               Discuss your roadmap

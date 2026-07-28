@@ -67,8 +67,14 @@ export default function Contactus() {
               Tell us what you&apos;re building
             </p>
             <p className="mt-4 text-lg text-[var(--text-secondary)]">
-              Share a short note about your goals, timeline, and stack. We read
-              every message and respond as soon as we can.
+              Share a short note about your goals, timeline, and stack — or{' '}
+              <a
+                href="/book"
+                className="font-medium text-[var(--accent-primary)] hover:underline"
+              >
+                book a 30-minute intro call
+              </a>
+              . We read every message and respond as soon as we can.
             </p>
             <div className="mt-10 space-y-6 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] p-8 backdrop-blur-sm">
               <div>
