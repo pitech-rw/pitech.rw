@@ -13,7 +13,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { google } from 'googleapis';
 
-const REDIRECT_URI = 'http://127.0.0.1:53682/oauth2callback';
+/** Web OAuth clients require a domain — use localhost, not 127.0.0.1 */
+const REDIRECT_URI = 'http://localhost:53682/oauth2callback';
 const SCOPES = ['https://www.googleapis.com/auth/calendar'];
 
 function loadEnvFile() {
@@ -98,7 +99,7 @@ async function main() {
       }
     });
     server.on('error', reject);
-    server.listen(53682, '127.0.0.1');
+    server.listen(53682, 'localhost');
   });
 
   const { tokens } = await oauth2.getToken(code);
