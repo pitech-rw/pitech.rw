@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <p className="text-lg font-semibold text-[var(--text-primary)]">Pi Tech</p>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-[var(--text-secondary)]">
-              Software development and consultancy from Kigali — web platforms,
+              Software development and consultancy — web platforms,
               cloud systems, and data tools for teams that need engineering done
               right.
             </p>

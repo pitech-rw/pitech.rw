@@ -12,7 +12,7 @@ const projects = [
   {
     name: 'Feru Energy',
     blurb: 'Safari Charger — EV charging experience',
-    href: 'https://www.safaricharger.com/',
+    href: 'https://www.csms.safaricharge.com/',
     image: '/safari.png',
     isSvg: false,
   },

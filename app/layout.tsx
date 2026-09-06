@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Pi Tech — Software consultancy · Kigali',
+  title: 'Pi Tech — Software consultancy',
   description:
     'Pi Tech Ltd. delivers custom software, cloud solutions, and technical advisory for teams in Rwanda and beyond.',
   icons: {

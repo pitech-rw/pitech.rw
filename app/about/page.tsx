@@ -19,7 +19,7 @@ export default function AboutPage() {
             About Pi Tech
           </p>
           <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight text-[var(--text-primary)] md:text-5xl">
-            Kigali-based software consultancy for teams that need dependable
+            Software consultancy for teams that need dependable
             delivery.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--text-secondary)]">
@@ -51,7 +51,7 @@ export default function AboutPage() {
             },
             {
               title: 'Focus',
-              body: 'Web platforms, cloud systems, and data-informed products designed for maintainability.',
+              body: 'Web and mobile platforms, cloud systems, and data-informed products designed for maintainability.',
             },
           ].map((item) => (
             <article
