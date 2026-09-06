@@ -100,7 +100,7 @@ export default function Contactus() {
                 </a>
               </div>
               <p className="text-sm text-[var(--text-muted)]">
-                Pi Tech Ltd · Kigali, Rwanda
+                Pi Tech Ltd 
               </p>
             </div>
           </div>

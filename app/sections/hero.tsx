@@ -14,18 +14,11 @@ export default function Hero() {
     >
       <div className="relative z-10 mx-auto grid max-w-6xl gap-14 px-6 pb-24 pt-28 md:px-8 md:pt-32 lg:grid-cols-12 lg:items-center lg:gap-10 lg:pb-28">
         <div className="lg:col-span-7">
-          <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] px-4 py-1.5 text-sm text-[var(--text-secondary)] backdrop-blur-sm">
-            <span
-              className="h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--accent-primary)]"
-              aria-hidden
-            />
-            Independent software consultancy · Kigali
-          </p>
           <h1 className="text-[2.75rem] font-semibold leading-[1.05] tracking-tight text-[var(--text-primary)] sm:text-5xl lg:text-[3.25rem] xl:text-6xl xl:leading-[1.04]">
             Software that holds up in the real world.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--text-secondary)] md:text-xl md:leading-relaxed">
-            We help institutions and product teams ship dependable web platforms,
+            We help institutions and product teams ship dependable web, mobile platforms,
             cloud systems, and data tools — with clear scope, pragmatic
             architecture, and engineering you can maintain.
           </p>
@@ -77,7 +70,7 @@ export default function Hero() {
             <div className="space-y-4 p-5 font-mono text-[13px] leading-relaxed text-[var(--text-secondary)] md:p-6">
               <p>
                 <span className="text-[var(--accent-primary)]">→</span>{' '}
-                <span className="text-[var(--text-primary)]">Scope</span> web
+                <span className="text-[var(--text-primary)]">Scope</span> web and mobile
                 platform + integrations
               </p>
               <p>

@@ -63,10 +63,6 @@ export default function Services() {
               seniority and pace to the risk profile of what you are shipping.
             </p>
           </div>
-          <p className="max-w-sm text-sm leading-relaxed text-[var(--text-muted)] lg:text-right">
-            Typical engagements blend delivery with advisory so decisions stay
-            traceable and your internal team levels up along the way.
-          </p>
         </div>
 
         <ul className="mt-14 grid gap-6 lg:grid-cols-2 lg:gap-8">
@@ -86,9 +82,6 @@ export default function Services() {
                 {primary.description}
               </p>
             </div>
-            <p className="relative mt-8 text-sm font-medium text-[var(--accent-primary)] lg:mt-10">
-              Core offering — most projects start here
-            </p>
           </li>
           {rest.map((s) => (
             <li
