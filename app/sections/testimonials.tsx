@@ -11,9 +11,9 @@ const projects = [
   },
   {
     name: 'Feru Energy',
-    blurb: 'Safari Charger — EV charging experience',
-    href: 'https://www.csms.safaricharge.com/',
-    image: '/safari.png',
+    blurb: 'SafariCharge — EV charging platform',
+    href: 'https://www.safaricharge.com/',
+    image: '/safari-logo.png',
     isSvg: false,
   },
   {
